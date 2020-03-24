@@ -7,26 +7,25 @@
         <title>Contemporâneo - Aulas particulares</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-        <link href="css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="css/style.css" rel="stylesheet"/>
+        <link href="./resources/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="./resources/css/style.css" rel="stylesheet"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-    
+
     </h:head>
     <h:body>
         <ui:insert name="header" >
             <ui:include src="template/header.xhtml" />
-        </ui:insert> 
+        </ui:insert>
         <ui:insert name="content" >
             <ui:include src="#{linker.getContent()}" />
         </ui:insert>    
         <ui:insert name="footer" >
             <ui:include src="template/footer.xhtml" />
         </ui:insert>
-        
-        <script src="js/jquery-3.2.1.slim.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+
+        <script src="./resources/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="./resources/js/popper.min.js"></script>
+        <script src="./resources/js/bootstrap.min.js"></script>
     </h:body>
 </html>
 
