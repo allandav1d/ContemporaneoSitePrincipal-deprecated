@@ -1,128 +1,135 @@
-<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
-                xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:f="http://xmlns.jcp.org/jsf/core" template="../index.xhtml">
-    <ui:define name="content">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <body>
+        <ui:composition>
 
-        <!-- Carousel -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="resources/img/baseCarousel.svg" alt="First slide"/>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="resources/img/baseCarousel.svg" alt="Second slide"/>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="resources/img/baseCarousel.svg" alt="Third slide"/>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Próximo</span>
-            </a>
-        </div>
-
-        <div class="container marketing">
-
-            <!-- Três pilares-->
-            <div class="row justify-content-center align-content-center text-center"> 
-                <div class="row justify-content-center align-content-center text-center">
-                    <div class="col-2 align-self-center p-1">
-                        <img src="resources/img/estrategia.svg" alt="Generic placeholder image" width="100%"/>
-                        <h2 class="text-responsive">Estratégia</h2>
+            <!-- Carousel -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="img/baseCarousel.svg" alt="First slide"/>
                     </div>
-
-                    <div class="col-1 align-self-center p-2">
-                        <img src="data:image/png;base64,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" alt="Generic placeholder image" width="100%"/>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/baseCarousel.svg" alt="Second slide"/>
                     </div>
-
-                    <div class="col-2 align-self-center p-1">
-                        <img src="resources/img/resultado.svg" alt="Generic placeholder image" width="100%"/>
-                        <h2 class="text-responsive">Resultado</h2>
-                    </div>
-
-                    <div class="col-1 align-self-center p-2">
-                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxnPg0KCQkJPHBhdGggZD0iTTg1LjMzMywyMTMuMzMzaDM0MS4zMzNDNDczLjcyOCwyMTMuMzMzLDUxMiwxNzUuMDYxLDUxMiwxMjhzLTM4LjI3Mi04NS4zMzMtODUuMzMzLTg1LjMzM0g4NS4zMzMNCgkJCQlDMzguMjcyLDQyLjY2NywwLDgwLjkzOSwwLDEyOFMzOC4yNzIsMjEzLjMzMyw4NS4zMzMsMjEzLjMzM3oiLz4NCgkJCTxwYXRoIGQ9Ik00MjYuNjY3LDI5OC42NjdIODUuMzMzQzM4LjI3MiwyOTguNjY3LDAsMzM2LjkzOSwwLDM4NHMzOC4yNzIsODUuMzMzLDg1LjMzMyw4NS4zMzNoMzQxLjMzMw0KCQkJCUM0NzMuNzI4LDQ2OS4zMzMsNTEyLDQzMS4wNjEsNTEyLDM4NFM0NzMuNzI4LDI5OC42NjcsNDI2LjY2NywyOTguNjY3eiIvPg0KCQk8L2c+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" alt="Generic placeholder image" width="100%"/>
-                    </div>
-
-                    <div class="col-3 align-self-center p-1">
-                        <img src="resources/img/logoSimples.png" alt="Generic placeholder image" width="100%"/>
-                        <h2 class="text-responsive">Contemporâneo</h2>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/baseCarousel.svg" alt="Third slide"/>
                     </div>
                 </div>
-
-                <div class="col-10 align-self-center">
-                    <p class="text-muted text-justify" style="margin: 1rem auto;">A partir dos pilares <b>Estratégia</b> e <b>Resultado</b>, temos como objetivo auxiliar nossos estudantes a construir métodos próprios e personalizados de aprendizado. Nossos educadores atuam a partir de planejamentos individuais, elaborados de acordo com a necessidade de cada educando e buscam, por meio da melhor estratégia, garantir que o estudante obtenha o melhor de si. </p>
-
-                    <h:form style="margin: 1rem auto;">
-                        <h:commandLink class="btn btn-secondary" value="Ver mais »" action="#{linker.setContent('/contents/ensino.xhtml')}">
-                            <f:ajax render=":content"/>
-                        </h:commandLink>
-                    </h:form>
-
-                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
             </div>
 
+            <div class="container marketing">
 
+                <!-- Três pilares-->
+                <div class="row justify-content-center align-content-center text-center"> 
+                    <div class="row justify-content-center align-content-center text-center">
+                        <div class="col-3 align-self-center">
+                            <img src="img/estrategia.svg" alt="Generic placeholder image" width="140" height="140"/>
+                            <h2>Estratégia</h2>
+                        </div>
 
-            <div class="jumbotron p-3 p-md-5 text-white rounded bg-green jumbotron-with-background d-none d-xl-block">
-                <div class="row">
-                    <div class="col-md-6 px-0">
-                        <h1 class="display-4 font-italic">Uma história de 34 anos de excelência, dedicação e aprendizado.</h1>
-                        <p class="lead my-3">"O Instituto Contemporâneo iniciou suas atividades em 1986. Na época, o professor José Yoshio Malheiros, diretor do Instituto, lecionava nas residências dos alunos. Em 1995, em razão da crescente..." </p>
-                        <h:form class="lead mb-0" style="margin: 1rem auto;">
-                            <h:commandLink class="text-white font-weight-bold" value="Continue lendo »" action="#{linker.setContent('/contents/institucional.xhtml')}">
+                        <div class="col-1 align-self-center">
+                            <img src="data:image/png;base64,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" alt="Generic placeholder image" width="50" height="50"/>
+                        </div>
+
+                        <div class="col-3 align-self-center">
+                            <img src="img/resultado.svg" alt="Generic placeholder image" width="140" height="140"/>
+                            <h2>Resultado</h2>
+                        </div>
+
+                        <div class="col-1 align-self-center">
+                            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxnPg0KCQkJPHBhdGggZD0iTTg1LjMzMywyMTMuMzMzaDM0MS4zMzNDNDczLjcyOCwyMTMuMzMzLDUxMiwxNzUuMDYxLDUxMiwxMjhzLTM4LjI3Mi04NS4zMzMtODUuMzMzLTg1LjMzM0g4NS4zMzMNCgkJCQlDMzguMjcyLDQyLjY2NywwLDgwLjkzOSwwLDEyOFMzOC4yNzIsMjEzLjMzMyw4NS4zMzMsMjEzLjMzM3oiLz4NCgkJCTxwYXRoIGQ9Ik00MjYuNjY3LDI5OC42NjdIODUuMzMzQzM4LjI3MiwyOTguNjY3LDAsMzM2LjkzOSwwLDM4NHMzOC4yNzIsODUuMzMzLDg1LjMzMyw4NS4zMzNoMzQxLjMzMw0KCQkJCUM0NzMuNzI4LDQ2OS4zMzMsNTEyLDQzMS4wNjEsNTEyLDM4NFM0NzMuNzI4LDI5OC42NjcsNDI2LjY2NywyOTguNjY3eiIvPg0KCQk8L2c+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" alt="Generic placeholder image" width="50" height="50"/>
+                        </div>
+
+                        <div class="col-4 align-self-center">
+                            <img src="img/logoSimples.png" alt="Generic placeholder image" height="140"/>
+                            <h2>Contemporâneo</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-10 align-self-center">
+                        <p class="text-muted text-justify" style="margin: 1rem auto;">&emsp;A partir dos pilares <b>Estratégia</b> e <b>Resultado</b>, temos como objetivo auxiliar nossos estudantes a construir métodos próprios e personalizados de aprendizado. Nossos educadores atuam a partir de planejamentos individuais, elaborados de acordo com a necessidade de cada educando e buscam, por meio da melhor estratégia, garantir que o estudante obtenha o melhor de si. </p>
+
+                        <h:form style="margin: 1rem auto;">
+                            <h:commandLink class="btn btn-secondary" value="Ver mais »" action="#{linker.setContent('/contents/ensino.xhtml')}">
                                 <f:ajax render=":content"/>
                             </h:commandLink>
                         </h:form>
+
+                    </div>
+                </div>
+
+                
+                
+                <div class="jumbotron p-3 p-md-5 text-white rounded bg-green jumbotron-with-background">
+                    <div class="row">
+                        <div class="col-md-6 px-0">
+                            <h1 class="display-4 font-italic">Uma história de 34 anos de excelência, dedicação e aprendizado.</h1>
+                            <p class="lead my-3">&emsp;"O Instituto Contemporâneo iniciou suas atividades em 1986. Na época, o professor José Yoshio Malheiros, diretor do Instituto, lecionava nas residências dos alunos. Em 1995, em razão da crescente..." </p>
+                            <h:form class="lead mb-0" style="margin: 1rem auto;">
+                                <h:commandLink class="text-white font-weight-bold" value="Continue lendo »" action="#{linker.setContent('/contents/institucional.xhtml')}">
+                                    <f:ajax render=":content"/>
+                                </h:commandLink>
+                            </h:form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informativos -->
+
+                <div class="row featurette">
+                    <div class="col-md-9">
+                        <h2 class="featurette-heading">Professores especialista. <span class="text-green">+40 disponiveis para atender seu filho.</span></h2>
+                        <p class="lead">Textos descritivos.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17108cf1a08%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17108cf1a08%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1171875%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 250px; height: 250px;"/>
+                    </div>
+                </div>
+
+                <hr class="featurette-divider"/>
+
+                <div class="row featurette">
+                    <div class="col-md-9 order-md-2">
+                        <h2 class="featurette-heading">+34 anos de experiência. <span class="text-green">Há 3 Décadas guiando alunos todos os dias.</span></h2>
+                        <p class="lead">Textos descritivos.</p>
+                    </div>
+                    <div class="col-md-3 order-md-1">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17108cf1a0b%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17108cf1a0b%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1171875%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 250px; height: 250px;"/>
+                    </div>
+                </div>
+
+                <hr class="featurette-divider"/>
+
+                <div class="row featurette">
+                    <div class="col-md-9">
+                        <h2 class="featurette-heading">+170.000 horas de aulas aplicadas. <span class="text-green">Se contadas hora-a-hora, são 232,8 mêses ininterrupto!</span></h2>
+                        <p class="lead">Textos descritivos.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17108cf1a0c%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17108cf1a0c%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1171875%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 250px; height: 250px;"/>
                     </div>
                 </div>
             </div>
 
-            <!-- Informativos -->
-
-            <div class="row featurette">
-                <div class="col-md-9">
-                    <h2 class="featurette-heading">Professores especialista. <span class="text-green">+40 disponiveis para atender seu filho.</span></h2>
-                    <p class="lead">Textos descritivos.</p>
-                </div>
-                <div class="col-md-3">
-                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17108cf1a08%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17108cf1a08%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1171875%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 250px; height: 250px;"/>
-                </div>
-            </div>
-
-            <hr class="featurette-divider"/>
-
-            <div class="row featurette">
-                <div class="col-md-9 order-md-2">
-                    <h2 class="featurette-heading">+34 anos de experiência. <span class="text-green">Há 3 Décadas guiando alunos todos os dias.</span></h2>
-                    <p class="lead">Textos descritivos.</p>
-                </div>
-                <div class="col-md-3 order-md-1">
-                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17108cf1a0b%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17108cf1a0b%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1171875%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 250px; height: 250px;"/>
-                </div>
-            </div>
-
-            <hr class="featurette-divider"/>
-
-            <div class="row featurette">
-                <div class="col-md-9">
-                    <h2 class="featurette-heading">+170.000 horas de aulas aplicadas. <span class="text-green">Se contadas hora-a-hora, são 232,8 mêses ininterrupto!</span></h2>
-                    <p class="lead">Textos descritivos.</p>
-                </div>
-                <div class="col-md-3">
-                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17108cf1a0c%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17108cf1a0c%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1171875%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 250px; height: 250px;"/>
-                </div>
-            </div>
-        </div>
-    </ui:define>
-</ui:composition>
+        </ui:composition>
+    </body>
+</html>
