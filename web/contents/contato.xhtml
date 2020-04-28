@@ -1,8 +1,37 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" template="../index.xhtml">
     <ui:define name="content">
-        <div style="min-height: 53vh">
-            pagina contato
+        <div class="container marketing">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-4 jumbotron p-3 p-md-5 text-white text-center rounded bg-green justify-content-center align-items-center">
+                            <img src="resources/img/whatsapp.png" alt="Generic placeholder image" width="140" height="140"/>
+                    
+                            <h1 class="display-4 font-italic">Atendimento via Whatsapp</h1>
+                        
+                            <ul class="social-network social-circle">
+                                <li class="text-center">
+                                    <a href="#" class="icoWhatsapp" title="Whatsapp"><i class="fa fa-whatsapp"></i></a>
+                                </li>
+                            </ul>
+                            <p class="text-center">
+                                (011) 9 9198-3007
+                            </p>
+                        </div>
 
+                        <div class="col-md-8">
+                            <!--Google map-->
+                            <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116963.35353688756!2d-46.7028581569008!3d-23.63641768039224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd61c6dfb216e7400!2sAulas%20Contempor%C3%A2neo!5e0!3m2!1spt-BR!2sbr!4v1586035989018!5m2!1spt-BR!2sbr" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+                            </div>
+                            <address>
+                                <br/>
+                                <strong>Contemporâneo</strong><br /> Rua Estela, 283<br /> São Paulo, 04011-001<br /> <abbr title="Phone">Tel:</abbr> (011) 5084-9733
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </ui:define>
 </ui:composition>

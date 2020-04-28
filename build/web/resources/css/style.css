@@ -99,12 +99,12 @@ a.socialIcon:hover, .socialHoverClass {
 }
 .navbar{
     background-color: #eaeff3;
-    max-height: 20vh;
+    max-height: 25vh;
     border-bottom: 5px solid #2473461f;
 }
 .navbar-logo{
     max-height: inherit;
-    width: 30vw;
+    width: 35vw;
 }
 .brand-Container{
     width: 26vw;
@@ -149,7 +149,7 @@ a.nav-link:hover{
     background-repeat: no-repeat;
     background-position: right;
     background-position-y: 0;
-    background-image: URL("../img/profyoshio.PNG");
+    background-image: URL("../img/profyoshio_jumbotron.png");
     background-size: contain;
     margin: 3rem auto;
 }

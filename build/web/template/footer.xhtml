@@ -3,7 +3,9 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"   
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      >
+
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <body>
         <ui:composition>
             <footer class="footer">
@@ -14,7 +16,7 @@
                     </div>
                     <div class="col-md-4 justify-content-center align-items-center">
                         <ul class="social-network social-circle">    
-                            <li><a href="https://www.facebook.com/AulasContemporaneo/" target="_blank" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.instagram.com/aulascontemporaneo/" target="_blank" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="https://www.facebook.com/AulasContemporaneo/" target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="https://www.facebook.com/AulasContemporaneo/" target="_blank" class="icoYoutube" title="Youtube"><i class="fa fa-youtube"></i></a></li>
                         </ul>
@@ -32,7 +34,11 @@
                             <div class="col-md-6 mt-md-0 mt-3">
 
                                 <!-- Content -->
-                                <div class="col-md-7 clearfix"><img src="resources/img/logoWhite.png" class="float-left img-fluid"/></div>
+                                <h:form class="col-md-7 clearfix">
+                                    <a href="http://aulascontemporaneo.com.br/">
+                                        <img src="resources/img/logoWhite.png" class="float-left img-fluid"/>       
+                                    </a>
+                                </h:form>
                             </div>
                             <!-- Grid column -->
 
@@ -46,16 +52,13 @@
 
                                 <ul class="list-unstyled">
                                     <li>
-                                        <a href="#!">Secretaria</a>
+                                        <a href="http://secretaria.aulascontemporaneo.com.br" target="_blank">Secretaria</a>
                                     </li>
                                     <li>
-                                        <a href="#!">Central do Aluno</a>
+                                        <a href="http://centraldoaluno.aulascontemporaneo.com.br" target="_blank">Central do Aluno</a>
                                     </li>
                                     <li>
-                                        <a href="#!">Área do Professor</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!"></a>
+                                        <a href="http://professor.aulascontemporaneo.com.br" target="_blank">Área do Professor</a>
                                     </li>
                                 </ul>
 
